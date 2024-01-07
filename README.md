@@ -1,60 +1,56 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/u9NLNn_7)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=13075205&assignment_repo_type=AssignmentRepo)
-# starter-lab-7
+# Reduced Instruction Set Computer (RISC) Project
 
-See the Lab 7 handout on Piazza for details of what you need to do and what files
-need to be included.  
+This project involves the development of a Turing-complete Simple RISC Machine capable of executing 16-bit ARM instruction sets. Below, I'll discuss the challenges faced, key learnings, and future plans for the project.
 
-The directory "assembler" includes source code for 'sas', a program you can use
-to automatically convert assembly code into programs to load into memory.  See
-further details in assembler/README.txt.  To build 'sas' from the provided source
-on your Windows computer, you may need to install cygwin.  Instructions for doing
-this can be found in the file cygwinlab7.pdf availalbe on Piazza.
+## Challenges Faced and Debugging Techniques
 
-DE1_SoC.qsf includes pins assignments (import in Quartus before synthesis using the 
-same procedure used for pb-pins.csv outline in the HDL tutorial). Do not modify this
-file.
+Developing a project of this nature involves extensive debugging and problem-solving. Here are some notable challenges encountered:
 
-You will need to create your own lab7_top.sv to demo/test your design on your
-DE1-SoC.
+- **Error or Typo in Code:**
+  Debugging required meticulous scrutiny due to errors or typos in the code.
 
-Use lab7_autograder_check.sv to test your code is compatible with the
-autograder that will be used to assign marks for your submission.  WARNING: The
-purpose of the checker file is NOT to tell you if your code is ``correct''.  If
-your code does not passing the checks in this file means your code will
-certainly get zero marks for the autograded portion.  Passing the checks in
-this file DOES NOT mean your code will get full marks.  Your code can pass
-these checks and get zero marks.  You still need to test your code using your
-own test benches!
+- **Inefficient Code Implementation:**
+  Initial code lacked proper planning, resulting in inefficiencies. Lengthy code sections and excessive finite state machine states complicated the implementation.
 
-Below is a (potentially incomplete) summary of files you need to add (check the 
-lab 5, 6 and 7 handout instructions for details on what goes in these and any other
-necessary files):
+- **Inferred Latches:**
+  Synthesis issues arose in Quartus due to inferred latches in the initial design.
 
-1. Your synthesizable and testbench code in files named:
-- cpu.sv
-- cpu_tb.sv
-- regfile.sv
-- alu.sv
-- shifter.sv
-- datapath.sv
-- datapath_tb.sv
+## Approaches to Problem Solving and Key Takeaways
 
-You can also include additional (system)verilog files for the logic instantiated in cpu.sv
-(e.g., for your controller and/or instruction register).
+To overcome challenges and improve the project, several strategies were employed:
 
-2. A Quartus Project File (.qpf) and the associated Quartus Settings File
-   (.qsf) that indicates which Verilog files are part of your project when
-compiling for your DE1-SoC. This .qsf file is created by Quartus when you
-create a project.  It is typically named <top_leve_module_name>.qsf (e.g.,
-lab6_top.qsf) and contains lines indicating which Verilog files are to be
-synthesized.
+- **Modularization:**
+  The hardware was divided into separate modules for clarity and ease of debugging.
 
-2. A Modelsim Project File (.mpf) for your testbench simulations including
-all synthesizable code files.
+- **Design Planning:**
+  Importance of planning and designing the entire system before coding, utilizing diagrams and flowcharts for communication and finite state machine state identification.
 
-3. The binary output file (.sof), generated from your synthesizable SystemVerilog
- used to program your DE1-SoC.  Your TAs may ask you to use the .sof generated when the 
-autograder synthesizes your design, if we have it available in time. However, include
-the one you generated as a backup to speed up the marking process during your demo.  
+## Debugging Strategies
 
+Strategies to expedite debugging processes:
+
+- **ModelSim WaveForm Generator:**
+  Utilizing ModelSim's waveform generator to verify correct hardware behavior through simulation testbenches.
+
+- **Display Messages:**
+  Implementation of display messages throughout simulation testbenches to identify and rectify issues related to typos and state bit assignments.
+
+- **Error Bit:**
+  Introduction of an error bit that turns high in the presence of errors, facilitating prompt issue localization.
+
+- **Edge Cases:**
+  Identification and testing of edge cases through comprehensive simulation testbenches, addressing extreme or unexpected system conditions.
+
+- **Web Search:**
+  Leveraging online platforms, such as StackOverflow, to troubleshoot errors and gain insights into error codes from tools like ModelSim and Quartus.
+
+## Future Implementations
+
+### Branching in C:
+Currently in progress, expanding the project's functionality by incorporating branches, utilizing both `for` and `while` loops in C.
+
+### UVM and Constrained Random Verification:
+Deepening understanding of Universal Verification Methodology (UVM), with a focus on constrained random verification. This knowledge will enhance testing methodologies, leveraging randomized inputs for improved coverage.
+
+### 2-Way Superscalar Pipelined Processor:
+Planning to implement a 2-way superscalar pipelined processor in the next phase of development. This advanced processor architecture introduces parallelism, enhancing instruction execution efficiency for improved overall performance.
