@@ -69,6 +69,39 @@ The following diagram illustrates the ARM instruction encodings that the machine
 
 ![image](https://github.com/ruwayd99/Reduced-Instruction-Set-Computer/assets/109923578/0a883541-2534-45bb-bd96-481d11b98fd3)
 
+## Software and Tools Used
+
+### SystemVerilog:
+
+**Description:** SystemVerilog is a hardware description and verification language that combines hardware description features of Verilog with advanced verification capabilities.
+
+**Reason for Use:** Chosen for designing and describing the hardware components of the RISC machine. Its support for both design and verification aspects makes it suitable for developing complex digital systems.
+
+### ModelSim:
+
+**Description:** ModelSim is a hardware simulation and debug environment used for testing and verifying hardware designs.
+
+**Reason for Use:** Employed for simulation testbenches to verify the correctness of the RISC machine's behavior before implementation on the FPGA. ModelSim's waveform viewer aids in analyzing and debugging simulation results.
+
+### Quartus:
+
+**Description:** Quartus is an integrated development environment (IDE) used for the design and programming of Field-Programmable Gate Arrays (FPGAs).
+
+**Reason for Use:** Selected for synthesis and implementation of the RISC machine design onto the DE1-SoC FPGA board. Quartus provides tools for compiling, mapping, and generating configuration files for FPGA programming.
+
+### FPGA (DE1-SoC Board):
+
+**Description:** A Field-Programmable Gate Array (FPGA) is a customizable hardware component that allows for reconfigurable digital circuit design.
+
+**Reason for Use:** The DE1-SoC FPGA board serves as the hardware platform for implementing and testing the RISC machine design. FPGAs offer flexibility and versatility, allowing the reconfiguration of digital circuits, making them suitable for prototyping and development.
+
+### ARM:
+
+**Description:** ARM (Acorn RISC Machine) is a family of Reduced Instruction Set Computing (RISC) architectures for computer processors.
+
+**Reason for Use:** Utilized for the 16-bit ARM instruction set that the RISC machine is designed to execute. ARM instructions provide a standardized set of operations for programming the RISC machine, contributing to compatibility and ease of programming.
+
+
 ## Brief description of each module
 
 ### Instruction decoder:
