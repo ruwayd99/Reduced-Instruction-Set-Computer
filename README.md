@@ -90,7 +90,7 @@ These are the encodings for the shift operations:
 
 ![image](https://github.com/ruwayd99/Reduced-Instruction-Set-Computer/assets/109923578/b4a7285c-b382-4386-931b-e3ed2b8e7d1e)
 
-The RTL diagram of the hardware after synthesis can be found here. 
+The RTL diagram of the hardware after synthesis can be found (here)[https://github.com/ruwayd99/Reduced-Instruction-Set-Computer/blob/main/RTL%20Viewer%20of%20final%20project.pdf]. 
 
 ## Testbench
 
