@@ -1,4 +1,4 @@
-// defination for 
+// defination for states
 `define Rn        3'b001
 `define Rd        3'b010
 `define Rm        3'b100

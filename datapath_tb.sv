@@ -1,6 +1,6 @@
 module datapath_tb();
 
-// definations 
+// definitions 
 `define SW 16
 `define zero 3'b000
 `define one 3'b001
