@@ -1,14 +1,4 @@
-// INSTRUCTIONS:
-//
-// You can use this file to demo your Lab6 on your DE1-SoC.  
-// 
-// You will need to fill in the sseg module as by default it will just print
-// F's on HEX0 through HEX3.  YOU SHOULD NOT need to change the signal names
-// inside the lab6_top module because the auto-grader will assume the same
-// interface.
-
-
-// DE1-SOC INTERFACE SPECIFICATION for lab6_top.v code in this file:
+// DE1-SOC INTERFACE SPECIFICATION in this file:
 //
 // clk input to datpath has rising edge when KEY0 is *pressed* 
 //
