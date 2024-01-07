@@ -56,7 +56,7 @@ As part of ongoing efforts, I am deepening my understanding of Universal Verific
 Aiming for the next phase of project development, I have plans to implement a 2-way superscalar pipelined processor. This advanced processor architecture introduces parallelism, enhancing the execution efficiency of instructions. The implementation of this feature will contribute to the project's overall performance and computational capabilities.
 
 ## Project Overview
-
+The RISC machine was subdivided into various modules which will be explained below. After it is synthesized and put it into the FPGA, the input can be sent through the switches (SW0 to SW7) and the output is displayed in the LEDs of the DE1-SoC. 
 Here is a high-level illustration of the machine:
 
 ![image](https://github.com/ruwayd99/Reduced-Instruction-Set-Computer/assets/109923578/9cd16c2e-c2cc-4e0f-bfa5-0158108c0f0c)
