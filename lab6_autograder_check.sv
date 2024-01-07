@@ -1,13 +1,3 @@
-// WARNING: This is NOT the autograder that will be used mark you.  
-// Passing the checks in this file does NOT (in any way) guarantee you 
-// will not lose marks when your code is run through the actual autograder.  
-// You are responsible for designing your own test benches to verify you 
-// match the specification given in the lab handout.
-
-// To work with our autograder you MUST be able to get your cpu.v to work
-// without making ANY changes to this file.  Refer to Section 4 in the Lab
-// 6 handout for more details.
-
 module lab6_check;
   reg clk, reset, s, load;
   reg [15:0] in;
