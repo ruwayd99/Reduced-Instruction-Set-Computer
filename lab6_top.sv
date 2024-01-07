@@ -14,10 +14,10 @@
 // When SW[9] is set to 1, SW[7:0] changes the upper 8 bits of the 16-bit
 // input "in". LEDR[8:0] will show the lower 8-bits of 16-bit input "in".
 //
-// The rising edge of clk occurs at the moment when you press KEY0.
-// The input reset is 1 as long as you press (and hold) KEY1.
-// The input s is 1 as long as you press (and hold) KEY2.
-// The input load is 1 as long as you press (and hold) KEY3.
+// The rising edge of clk occurs at the moment when KEY0 is pressed.
+// The input reset is 1 as long as KE1 is pressed (and held).
+// The input s is 1 as long as KE2 is pressed (and held).
+// The input load is 1 as long as KEY3 is pressed (and held).
 
 module lab6_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
   input [3:0] KEY;
@@ -119,22 +119,6 @@ module sseg(in,segs);
   `define d_E     7'b0000110
   `define d_F     7'b0001110
   
-  // NOTE: The code for sseg below is not complete: You can use your code from
-  // Lab4 to fill this in or code from someone else's Lab4.  
-  //
-  // IMPORTANT:  If you *do* use someone else's Lab4 code for the seven
-  // segment display you *need* to state the following three things in
-  // a file README.txt that you submit with handin along with this code: 
-  //
-  //   1.  First and last name of student providing code
-  //   2.  Student number of student providing code
-  //   3.  Date and time that student provided you their code
-  //
-  // You must also (obviously!) have the other student's permission to use
-  // their code.
-  //
-  // To do otherwise is considered plagiarism.
-  //
   // One bit per segment. On the DE1-SoC a HEX segment is illuminated when
   // the input bit is 0. Bits 6543210 correspond to:
   //
